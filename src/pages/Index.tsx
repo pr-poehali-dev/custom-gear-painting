@@ -262,7 +262,7 @@ const Index = () => {
               { icon: 'Package', title: 'Получение', desc: 'Доставка + сертификат' }
             ].map((step, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center glow-orange">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center animate-glow-pulse">
                   <Icon name={step.icon} size={32} className="text-primary" />
                 </div>
                 <div className="text-3xl font-black text-gradient mb-2">{index + 1}</div>
