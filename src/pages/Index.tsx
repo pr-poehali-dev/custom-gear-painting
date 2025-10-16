@@ -127,43 +127,50 @@ const Index = () => {
                 backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${slide.image})`
               }}
             />
-            <div className="relative h-full flex items-center justify-center text-center px-4">
-              <div className="max-w-4xl animate-fade-in">
-                <h2 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
-                  {slide.title.split(' ').map((word, i) => (
-                    <span key={i} className={i === 0 ? 'text-gradient' : ''}>
-                      {word}{' '}
-                    </span>
-                  ))}
-                </h2>
-                <p className="text-xl md:text-2xl text-muted-foreground mb-8">{slide.subtitle}</p>
-                <div className="flex gap-4 justify-center">
-                  <Button size="lg" onClick={() => scrollToSection('contact')} className="bg-primary hover:bg-primary/90 text-lg px-8 glow-orange-strong">
-                    <Icon name="Brush" className="mr-2" />
-                    Заказать эскиз бесплатно
-                  </Button>
-                  <Button size="lg" variant="outline" onClick={() => scrollToSection('portfolio')} className="text-lg px-8 border-metal">
-                    Портфолио
-                  </Button>
-                </div>
-                <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
-                  {[
-                    { icon: 'Shield', text: 'Гарантия 3 года' },
-                    { icon: 'Truck', text: 'Доставка по РФ' },
-                    { icon: 'Users', text: '350+ клиентов' },
-                    { icon: 'Award', text: 'С 2018 года' }
-                  ].map((item, i) => (
-                    <div key={i} className="flex flex-col items-center gap-2">
-                      <Icon name={item.icon} size={32} className="text-primary" />
-                      <span className="text-sm text-muted-foreground">{item.text}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
           </div>
         ))}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
+        
+        <div className="relative h-full flex items-center justify-center text-center px-4">
+          <div className="max-w-4xl animate-fade-in">
+            <h2 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
+              {slides[activeSlide].title.split(' ').map((word, i) => (
+                <span key={i} className={i === 0 ? 'text-gradient' : ''}>
+                  {word}{' '}
+                </span>
+              ))}
+            </h2>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8">{slides[activeSlide].subtitle}</p>
+            <div className="flex gap-4 justify-center">
+              <Button size="lg" onClick={() => scrollToSection('contact')} className="bg-primary hover:bg-primary/90 text-lg px-8 glow-orange-strong">
+                <Icon name="Brush" className="mr-2" />
+                Заказать эскиз бесплатно
+              </Button>
+              <Button size="lg" variant="outline" onClick={() => scrollToSection('portfolio')} className="text-lg px-8 border-metal">
+                Портфолио
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-24 left-0 right-0 z-10">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto bg-background/80 backdrop-blur-sm p-6 rounded-lg border border-border">
+              {[
+                { icon: 'Shield', text: 'Гарантия 3 года' },
+                { icon: 'Truck', text: 'Доставка по РФ' },
+                { icon: 'Users', text: '350+ клиентов' },
+                { icon: 'Award', text: 'С 2018 года' }
+              ].map((item, i) => (
+                <div key={i} className="flex flex-col items-center gap-2">
+                  <Icon name={item.icon} size={32} className="text-primary" />
+                  <span className="text-sm text-muted-foreground">{item.text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-10">
           {slides.map((_, index) => (
             <button
               key={index}
