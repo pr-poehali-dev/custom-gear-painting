@@ -114,7 +114,6 @@ const Index = () => {
               <button onClick={() => scrollToSection('contact')} className="hover:text-primary transition-colors">Контакты</button>
             </nav>
             <div className="flex items-center gap-3">
-              <a href="tel:+79502997099" className="hidden md:block text-sm">+7 (950) 299-70-99</a>
               <Button onClick={() => scrollToSection('contact')} className="bg-primary hover:bg-primary/90 glow-orange">
                 Заказать эскиз
               </Button>
