@@ -94,7 +94,7 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       <header className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-4 py-3">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-8">
             <div className="flex items-center gap-3">
               <div className="relative h-12 w-12 flex items-center justify-center">
                 <div className="absolute inset-0 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-primary/40 blur-lg rounded-full"></div>
@@ -106,18 +106,16 @@ const Index = () => {
               </div>
               <h1 className="text-2xl font-black text-gradient">CUSTOM ASURA</h1>
             </div>
-            <nav className="hidden md:flex items-center gap-6">
-              <button onClick={() => scrollToSection('portfolio')} className="hover:text-primary transition-colors">Примеры работ</button>
-              <button onClick={() => scrollToSection('how-it-works')} className="hover:text-primary transition-colors">Как это работает</button>
-              <button onClick={() => scrollToSection('pricing')} className="hover:text-primary transition-colors">Цены</button>
-              <button onClick={() => scrollToSection('testimonials')} className="hover:text-primary transition-colors">Отзывы</button>
-              <button onClick={() => scrollToSection('contact')} className="hover:text-primary transition-colors">Контакты</button>
+            <nav className="hidden md:flex items-center justify-center gap-8 flex-1">
+              <button onClick={() => scrollToSection('portfolio')} className="hover:text-primary transition-colors whitespace-nowrap">Примеры работ</button>
+              <button onClick={() => scrollToSection('how-it-works')} className="hover:text-primary transition-colors whitespace-nowrap">Как это работает</button>
+              <button onClick={() => scrollToSection('pricing')} className="hover:text-primary transition-colors whitespace-nowrap">Цены</button>
+              <button onClick={() => scrollToSection('testimonials')} className="hover:text-primary transition-colors whitespace-nowrap">Отзывы</button>
+              <button onClick={() => scrollToSection('contact')} className="hover:text-primary transition-colors whitespace-nowrap">Контакты</button>
             </nav>
-            <div className="flex items-center gap-3">
-              <Button onClick={() => scrollToSection('contact')} className="bg-primary hover:bg-primary/90 glow-orange">
-                Заказать эскиз
-              </Button>
-            </div>
+            <Button onClick={() => scrollToSection('contact')} className="bg-primary hover:bg-primary/90 glow-orange whitespace-nowrap">
+              Заказать эскиз
+            </Button>
           </div>
         </div>
       </header>
