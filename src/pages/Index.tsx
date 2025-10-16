@@ -130,8 +130,8 @@ const Index = () => {
           </div>
         ))}
         
-        <div className="relative h-full flex items-center justify-center text-center px-4 pb-40">
-          <div className="max-w-4xl">
+        <div className="relative h-full flex flex-col items-center justify-center text-center px-4">
+          <div className="max-w-4xl mb-48">
             <h2 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
               {slides[activeSlide].title.split(' ').map((word, i) => (
                 <span key={i} className={i === 0 ? 'text-gradient' : ''}>
@@ -139,19 +139,17 @@ const Index = () => {
                 </span>
               ))}
             </h2>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8">{slides[activeSlide].subtitle}</p>
-          </div>
-        </div>
-
-        <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 z-20">
-          <div className="flex gap-4 justify-center px-4">
-            <Button size="lg" onClick={() => scrollToSection('contact')} className="bg-primary hover:bg-primary/90 text-lg px-8 glow-orange-strong">
-              <Icon name="Brush" className="mr-2" />
-              Заказать эскиз бесплатно
-            </Button>
-            <Button size="lg" variant="outline" onClick={() => scrollToSection('portfolio')} className="text-lg px-8 border-metal bg-background/50 backdrop-blur-sm hover:bg-background/80">
-              Портфолио
-            </Button>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-12">{slides[activeSlide].subtitle}</p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" onClick={() => scrollToSection('contact')} className="bg-primary hover:bg-primary/90 text-lg px-8 glow-orange-strong">
+                <Icon name="Brush" className="mr-2" />
+                Заказать эскиз бесплатно
+              </Button>
+              <Button size="lg" variant="outline" onClick={() => scrollToSection('portfolio')} className="text-lg px-8 border-metal bg-background/50 backdrop-blur-sm hover:bg-background/80">
+                Портфолио
+              </Button>
+            </div>
           </div>
         </div>
 
