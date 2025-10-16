@@ -96,13 +96,12 @@ const Index = () => {
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="relative h-14 w-14 flex items-center justify-center">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary via-orange to-primary opacity-50 blur-md animate-glow-pulse"></div>
-                <div className="absolute inset-0 rounded-full border-2 border-primary/60 animate-glow-pulse"></div>
+              <div className="relative h-12 w-12 flex items-center justify-center">
+                <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-10 h-2 bg-primary/30 blur-sm"></div>
                 <img 
-                  src="https://cdn.poehali.dev/files/364378e1-f103-4a06-b5bb-20e9ffbd6d8c.png" 
+                  src="https://cdn.poehali.dev/files/f200a1c7-5ec5-4d18-b65d-fe95bd255e4e.png" 
                   alt="Custom Asura" 
-                  className="relative z-10 h-12 w-12 object-contain drop-shadow-[0_0_8px_rgba(255,69,0,0.8)]"
+                  className="relative z-10 h-full w-full object-contain"
                 />
               </div>
               <h1 className="text-2xl font-black text-gradient">CUSTOM ASURA</h1>
