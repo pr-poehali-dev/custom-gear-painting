@@ -96,11 +96,22 @@ const Index = () => {
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <img 
-                src="https://cdn.poehali.dev/files/acf3cfbc-e978-4218-a30f-99b967ca1ce8.jpg" 
-                alt="Custom Asura Logo" 
-                className="h-12 w-12 object-contain brightness-0 invert"
-              />
+              <div className="relative h-12 w-12 flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary to-orange rounded-lg opacity-20 animate-glow-pulse"></div>
+                <img 
+                  src="https://cdn.poehali.dev/files/acf3cfbc-e978-4218-a30f-99b967ca1ce8.jpg" 
+                  alt="Custom Asura" 
+                  className="relative z-10 h-10 w-10 object-contain mix-blend-lighten"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const parent = target.parentElement;
+                    if (parent) {
+                      parent.innerHTML = '<div class="text-2xl">⚡</div>';
+                    }
+                  }}
+                />
+              </div>
               <h1 className="text-2xl font-black text-gradient">CUSTOM ASURA</h1>
             </div>
             <nav className="hidden md:flex items-center gap-6">
