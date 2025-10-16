@@ -302,7 +302,7 @@ const Index = () => {
                 popular: false
               }
             ].map((plan, index) => (
-              <Card key={index} className={`p-8 ${plan.popular ? 'border-primary glow-orange scale-105' : ''}`}>
+              <Card key={index} className={`p-8 transition-all duration-500 hover:scale-110 hover:glow-orange-strong cursor-pointer group ${plan.popular ? 'border-primary glow-orange scale-105' : ''}`}>
                 {plan.popular && (
                   <div className="text-center mb-4">
                     <span className="inline-block bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-bold">
@@ -310,11 +310,11 @@ const Index = () => {
                     </span>
                   </div>
                 )}
-                <h3 className="text-2xl font-black text-center mb-2">{plan.name}</h3>
-                <div className="text-4xl font-black text-center mb-6 text-gradient">{plan.price}</div>
+                <h3 className="text-2xl font-black text-center mb-2 group-hover:text-primary transition-colors duration-300">{plan.name}</h3>
+                <div className="text-4xl font-black text-center mb-6 text-gradient group-hover:scale-110 transition-transform duration-300">{plan.price}</div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2">
+                    <li key={i} className="flex items-center gap-2 group-hover:translate-x-2 transition-transform duration-300">
                       <Icon name="Check" size={20} className="text-primary flex-shrink-0" />
                       <span>{feature}</span>
                     </li>
