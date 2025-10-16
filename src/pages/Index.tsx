@@ -114,7 +114,7 @@ const Index = () => {
               <button onClick={() => scrollToSection('contact')} className="hover:text-primary transition-colors">Контакты</button>
             </nav>
             <div className="flex items-center gap-3">
-              <a href="tel:+7XXXXXXXXXX" className="hidden md:block text-sm">+7 (XXX) XXX-XX-XX</a>
+              <a href="tel:+79502997099" className="hidden md:block text-sm">+7 (950) 299-70-99</a>
               <Button onClick={() => scrollToSection('contact')} className="bg-primary hover:bg-primary/90 glow-orange">
                 Заказать эскиз
               </Button>
@@ -472,15 +472,15 @@ const Index = () => {
             <div className="flex flex-col gap-2 text-muted-foreground">
               <p className="flex items-center justify-center gap-2">
                 <Icon name="Phone" size={20} />
-                +7 (XXX) XXX-XX-XX
+                <a href="tel:+79502997099" className="hover:text-primary transition-colors">+7 (950) 299-70-99</a>
               </p>
               <p className="flex items-center justify-center gap-2">
                 <Icon name="Mail" size={20} />
-                info@moto-art.ru
+                <a href="mailto:kurahikari267@gmail.com" className="hover:text-primary transition-colors">kurahikari267@gmail.com</a>
               </p>
               <p className="flex items-center justify-center gap-2">
                 <Icon name="MapPin" size={20} />
-                Москва, ул. Примерная, д. 10
+                Приморский край, Владивосток
               </p>
               <p className="flex items-center justify-center gap-2">
                 <Icon name="Clock" size={20} />
