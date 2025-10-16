@@ -184,11 +184,11 @@ const Index = () => {
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
             Вы купили качественный шлем и куртку за немалые деньги, но на первой же встрече байкеров обнаружили ещё троих с точно такими же. Серийная экипировка — компромисс между безопасностью и безликостью.
           </p>
-          <div className="metal-gradient p-8 rounded-lg">
-            <p className="text-xl italic mb-4">
+          <div className="metal-gradient p-8 rounded-lg cursor-pointer transition-all duration-500 hover:scale-105 hover:glow-orange group">
+            <p className="text-xl italic mb-4 group-hover:text-primary transition-colors duration-300">
               "Я год ездил в чёрном AGV, пока не заказал роспись в стиле японского демона. Теперь меня узнают все — это невероятное чувство."
             </p>
-            <p className="text-sm text-muted-foreground">— Дмитрий, Yamaha R1, Москва</p>
+            <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">— Дмитрий, Yamaha R1, Москва</p>
           </div>
         </div>
       </section>
