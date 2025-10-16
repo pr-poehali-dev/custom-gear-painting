@@ -97,7 +97,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="relative h-12 w-12 flex items-center justify-center">
-                <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-10 h-2 bg-primary/30 blur-sm"></div>
+                <div className="absolute inset-0 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-primary/40 blur-lg rounded-full"></div>
                 <img 
                   src="https://cdn.poehali.dev/files/f200a1c7-5ec5-4d18-b65d-fe95bd255e4e.png" 
                   alt="Custom Asura" 
