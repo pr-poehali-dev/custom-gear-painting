@@ -93,9 +93,16 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-black text-gradient">MOTO CUSTOM PAINT</h1>
+            <div className="flex items-center gap-3">
+              <img 
+                src="https://cdn.poehali.dev/files/acf3cfbc-e978-4218-a30f-99b967ca1ce8.jpg" 
+                alt="Custom Asura Logo" 
+                className="h-12 w-12 object-contain brightness-0 invert"
+              />
+              <h1 className="text-2xl font-black text-gradient">CUSTOM ASURA</h1>
+            </div>
             <nav className="hidden md:flex items-center gap-6">
               <button onClick={() => scrollToSection('portfolio')} className="hover:text-primary transition-colors">Примеры работ</button>
               <button onClick={() => scrollToSection('how-it-works')} className="hover:text-primary transition-colors">Как это работает</button>
